@@ -8,12 +8,11 @@ export class HotelsController {
 
     constructor(private readonly hotelsService: HotelsService) {}
 
-
     @Post()
     async create(@Body() createHotelDto: CreateHotelDto) {
       this.hotelsService.create(createHotelDto);
     }
-  
+
     @Get()
     async findAll(): Promise<IHotel[]> {
       return this.hotelsService.findAll();

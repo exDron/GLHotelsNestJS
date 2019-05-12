@@ -6,5 +6,9 @@
     "password": "123456",
     "database": "hotels",
     "entities": ["src/**/**/entities/**.entity{.ts,.js}"],
-    "synchronize": true
+    "migrations": ["migrations/*.ts"],
+    "cli": {
+        "migrationsDir": "migrations"
+    },
+    "synchronize": false
 }
